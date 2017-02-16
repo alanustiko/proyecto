@@ -10,8 +10,8 @@ core.launcher.parser.loadClass("header",{
 			$('#header').append('<img src="'+this.image+'" alt="imagen de título" />');
 		}
 		if(this.menu){
-			var html = ""
-				+ '<nav class="navbar navbar-default" role="navigation">'
+			var html = 
+				 '<nav class="navbar navbar-default" role="navigation">'
 				  + '<div class="navbar-header">'
 				    + '<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">'
 				      + '<span class="sr-only">Desplegar navegación</span>'

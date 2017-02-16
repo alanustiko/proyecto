@@ -83,12 +83,29 @@ core = {
 						classes: [],
 						
 						initialize: function(){
+							var oThis = this;
+							function executeFunctionByName(functionName, context /*, args */) {
+							  var args = [].slice.call(arguments).splice(2);
+							  var namespaces = functionName.split(".");
+							  var func = namespaces.pop();
+							  context[func] = function(){
+								oThis.classes[func].initialize(core.launcher.loader.conf[func]);
+							  };
+							}
 							this.classes['header'].initialize(core.launcher.loader.conf['header']);
 							this.classes['escenario'].initialize(core.launcher.loader.conf['escenario']);
 							for(var c in this.classes){
 								if(this.classes[c].initialize){
-									if(c != 'header' && c != 'escenario')
+									if(c != 'header' && c != 'escenario'){
+										executeFunctionByName(c, this);
+									}
+								}
+							}
+							for(var c in this.classes){
+								if(this.classes[c].initialize){
+									if(c != 'header' && c != 'escenario' && c != 'personaje'){
 										this.classes[c].initialize(core.launcher.loader.conf[c]);
+									}
 								}
 							}
 						},

@@ -8,6 +8,12 @@ core.launcher.loader.conf = {
 		}
 	},
 	"escenario": {
-		"columna": "columna.png"
+		
+	},
+	"columna":{
+		"img": "columna.png"
+	},
+	"personaje":{
+		"nivel": "1"
 	}
 };
