@@ -1,0 +1,43 @@
+/* html { */
+/*   height: 100%; */
+/* } */
+/* body { */
+/*   min-height: 100%; */
+/* } */
+/*loadingWindow*/
+#loadingWindow{
+	background-color: blue;
+    width: 10%;
+    height: 20%;
+    position: absolute;
+    left: 45%;
+    top: 40%;
+}
+#loadingWindow .textcontainer{
+	margin: 10%;
+}
+#loadingWindow .barcontainer{
+	margin: 10%;
+}
+/*header*/
+#header{
+	/*margin: 10% 10% 0 10%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 80%;*/
+	margin: 10% 10% 0;
+	height: 20%;
+}
+/*escenario*/
+#escenario{
+	/*position: absolute;
+	top: 20%;
+	left: 0px;
+	height: 80%;
+	width: 80%;
+	/*margin: 10%;*/
+	height: 600px;
+	margin: 0% 8%;
+	background: black;
+}
